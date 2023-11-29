@@ -1,0 +1,16 @@
+<h1>Sign Up</h1>
+
+<%=  %>
+<form action="<%=users_url%>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+    <label for="email">Email
+        <input type="text" id="email" name="user[email]">
+    </label>
+
+    <label for="password">Password
+        <input type="password" id="password" name="user[password]">
+    </label>
+
+    <button type="submit">Sign Up</button>
+</form>
+
