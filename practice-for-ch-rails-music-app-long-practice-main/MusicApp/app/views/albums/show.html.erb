@@ -1,0 +1,15 @@
+<h1><%= @album.title %></h1>
+<h3><%= @album.year %></h3>
+<%if @album.live%>
+    <h3>Live Recording</h3>
+    <% else %>
+    <h3>Studio Recording</h3>
+<% end %>
+
+
+<form action="<%=album_url(@album)%>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+    <button type="submit">DELETE Album</button>
+</form>
+

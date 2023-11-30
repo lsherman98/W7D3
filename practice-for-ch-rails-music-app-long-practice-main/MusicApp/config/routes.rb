@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :users
   resource :session, only: [:create, :destroy, :new]
-  resources :bands, only: [:show, :index, :edit, :update, :destroy, :create, :new]
+  resources :bands do 
+    resources :albums, only: [:new]
+  end
+  resources :albums, except: [:new, :index]
 end

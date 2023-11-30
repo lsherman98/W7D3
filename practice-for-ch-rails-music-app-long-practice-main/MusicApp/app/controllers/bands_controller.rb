@@ -13,7 +13,7 @@ class BandsController < ApplicationController
 
   def show
     @band = Band.find(params[:id])
-    redirect_to band_url(@band)
+    render :show
   end
 
   def edit
